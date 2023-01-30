@@ -1,1 +1,1 @@
-# Starter Temlate for NodeJS, Express, MongoDB
+# Starter Template for NodeJS, Express, MongoDB
