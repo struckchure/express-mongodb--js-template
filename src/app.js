@@ -4,7 +4,7 @@ import express, { Router } from "express";
 import morgan from "morgan";
 
 import mongoose from "mongoose";
-import booksRouter from "./books/books.controller.js";
+import booksRouter from "./books/books.router.js";
 
 const app = express();
 
@@ -34,7 +34,11 @@ app.use(
     "[:date[clf]] :method :url HTTP/:http-version :status :res[content-length] - :response-time ms"
   )
 );
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 // routes
 const rootRouter = Router();
